@@ -1,12 +1,19 @@
+import { motion } from "framer-motion";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-12">
+    <motion.footer 
+      className="bg-foreground text-background py-12"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+    >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm text-background/70 font-body">
-            Copyright © 2024 - All rights reserved by Kriya & Reeths
+            Copyright © 2026 - All rights reserved by Appnstruct
           </p>
 
           <div className="flex items-center gap-4">
@@ -37,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

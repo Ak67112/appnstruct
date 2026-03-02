@@ -17,20 +17,32 @@ const row2 = [sl10, sl11, sl12, sl1, sl2, sl3, sl4, sl5];
 
 const CreativesSection = () => {
   return (
-    <section id="portfolio" className="py-24 bg-background overflow-hidden">
+    <section id="portfolio" className="py-16 md:py-24 bg-background overflow-hidden">
       <motion.div
         className="text-center mb-16 px-6"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 40, scale: 0.9 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.7 }}
       >
-        <h2 className="font-heading font-black text-4xl md:text-6xl text-foreground">
+        <motion.h2 
+          className="font-heading font-black text-4xl md:text-6xl text-foreground"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
           Recent <span className="text-primary">Creatives</span>
-        </h2>
-        <p className="text-muted-foreground mt-4 text-base md:text-lg max-w-xl mx-auto">
+        </motion.h2>
+        <motion.p 
+          className="text-muted-foreground mt-4 text-base md:text-lg max-w-xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
           Ready to be wowed? Check out our mind-blowing recent creatives.
-        </p>
+        </motion.p>
       </motion.div>
 
       {/* Row 1 - scroll left */}
@@ -39,7 +51,7 @@ const CreativesSection = () => {
           {[...row1, ...row1].map((img, i) => (
             <div
               key={`r1-${i}`}
-              className="flex-shrink-0 w-64 h-64 rounded-xl overflow-hidden"
+              className="flex-shrink-0 w-64 h-64 rounded-xl overflow-hidden border border-border transition-all duration-500 hover:border-primary hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]"
             >
               <img
                 src={img}
@@ -58,7 +70,7 @@ const CreativesSection = () => {
           {[...row2, ...row2].map((img, i) => (
             <div
               key={`r2-${i}`}
-              className="flex-shrink-0 w-64 h-64 rounded-xl overflow-hidden"
+              className="flex-shrink-0 w-64 h-64 rounded-xl overflow-hidden border border-border transition-all duration-500 hover:border-primary hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]"
             >
               <img
                 src={img}

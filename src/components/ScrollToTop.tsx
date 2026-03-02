@@ -1,9 +1,27 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUp } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
+
+  // Scroll to top on route change or handle hash navigation
+  useEffect(() => {
+    if (location.hash) {
+      // If there's a hash, scroll to that element
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // No hash, scroll to top
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+  }, [location.pathname, location.hash]);
 
   useEffect(() => {
     const toggle = () => setVisible(window.scrollY > 400);
