@@ -51,7 +51,7 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-background relative overflow-hidden" data-aos="fade-up">
       {/* Animated Background Particles */}
       {[...Array(15)].map((_, i) => (
         <motion.div
@@ -81,6 +81,8 @@ const ProcessSection = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          data-aos="zoom-in"
+          data-aos-duration="800"
         >
           <motion.h2 
             className="font-heading font-black text-4xl md:text-6xl text-foreground mb-4"
@@ -172,6 +174,9 @@ const ProcessSection = () => {
                       stiffness: 100
                     }}
                     style={{ transformStyle: "preserve-3d" }}
+                    data-aos={isEven ? "slide-right" : "slide-left"}
+                    data-aos-duration="800"
+                    data-aos-delay={i * 100}
                   >
                     <motion.div
                       className={`relative bg-gradient-to-br from-card to-background border-2 border-border rounded-2xl p-8 shadow-lg overflow-hidden group cursor-pointer`}

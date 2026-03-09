@@ -16,6 +16,7 @@ const HeroSection = () => {
       id="top"
       className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-background"
       style={{ perspective: "1000px" }}
+      data-aos="fade-up"
     >
       {/* 3D Background Models */}
       {/* Rotating Cube Wireframe */}
@@ -141,6 +142,8 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 40, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
+        data-aos="zoom-in"
+        data-aos-duration="800"
       >
         <motion.p
           className="text-lg md:text-2xl font-body text-foreground mb-2"

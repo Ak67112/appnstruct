@@ -16,7 +16,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-background relative overflow-hidden">
+    <section id="contact" className="py-16 md:py-24 bg-background relative overflow-hidden" data-aos="fade-up">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           className="text-center mb-12"
@@ -24,6 +24,8 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          data-aos="zoom-in"
+          data-aos-duration="800"
         >
           <motion.h2 
             className="font-heading font-black text-4xl md:text-6xl text-foreground"
@@ -52,6 +54,9 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="200"
         >
           <motion.div
             initial={{ opacity: 0, x: -20 }}

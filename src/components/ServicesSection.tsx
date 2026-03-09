@@ -34,7 +34,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-16 md:py-24 bg-grey-bg relative overflow-hidden">
+    <section id="services" className="py-16 md:py-24 bg-grey-bg relative overflow-hidden" data-aos="fade-up">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -42,6 +42,8 @@ const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          data-aos="zoom-in-up"
+          data-aos-duration="800"
         >
           <h2 className="font-heading font-black text-4xl md:text-6xl text-foreground">
             Our <span className="text-primary">Services</span>
@@ -62,6 +64,9 @@ const ServicesSection = () => {
                 scale: 1.03,
                 boxShadow: "0 0 30px rgba(14, 165, 233, 0.5), 0 20px 40px rgba(0, 0, 0, 0.4)"
               }}
+              data-aos="flip-up"
+              data-aos-duration="800"
+              data-aos-delay={i * 100}
             >
               {/* Large number bg */}
               <span className="absolute -top-4 -right-2 font-heading font-black text-8xl text-muted/30 group-hover:text-primary/30 transition-colors duration-300">

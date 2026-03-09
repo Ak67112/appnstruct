@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 md:py-24 bg-background relative overflow-hidden">
+    <section id="about" className="py-16 md:py-24 bg-background relative overflow-hidden" data-aos="fade-up">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
@@ -10,6 +10,8 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          data-aos="zoom-in"
+          data-aos-duration="800"
         >
           <h2 className="font-heading font-black text-4xl md:text-6xl text-foreground">
             Raise Your Brand <span className="text-primary">With Us</span>
