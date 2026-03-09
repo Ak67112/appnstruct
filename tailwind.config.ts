@@ -15,9 +15,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        poppins: ["Audiowide", "sans-serif"],
-        heading: ["Audiowide", "sans-serif"],
-        body: ["Audiowide", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        heading: ["Poppins", "sans-serif"],
+        body: ["Poppins", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
