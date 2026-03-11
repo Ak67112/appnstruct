@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   return (
     <section
-      id="top"
+      id="home"
       className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-background"
       style={{ perspective: "1000px" }}
       data-aos="fade-up"

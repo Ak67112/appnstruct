@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
 
-import sl1 from "@/assets/sl-1.webp";
-import sl2 from "@/assets/sl-2.webp";
-import sl3 from "@/assets/sl-3.webp";
-import sl4 from "@/assets/sl-4.webp";
-import sl5 from "@/assets/sl-5.webp";
-import sl6 from "@/assets/sl-6.webp";
-import sl7 from "@/assets/sl-7.webp";
-import sl8 from "@/assets/sl-8.webp";
-import sl10 from "@/assets/sl-10.jpeg";
-import sl11 from "@/assets/sl-11.jpeg";
-import sl12 from "@/assets/sl-12.jpeg";
+import grinder1 from "@/assets/Grinder 1.png";
+import grinder2 from "@/assets/Grinder 2.png";
+import grinder3 from "@/assets/Grinder 3.png";
+import globalReach from "@/assets/Global Rearch.png";
+import huller from "@/assets/Huller.png";
+import destoner from "@/assets/DESTONER MACHINE (1).png";
+import maintenance from "@/assets/maintence 2.png";
+import saral from "@/assets/Saral.png";
+import onAllProducts from "@/assets/on all products.png";
+import post1 from "@/assets/post 1.png";
 
-const row1 = [sl1, sl2, sl3, sl4, sl5, sl6, sl7, sl8];
-const row2 = [sl10, sl11, sl12, sl1, sl2, sl3, sl4, sl5];
+const row1 = [grinder1, grinder2, grinder3, globalReach, huller, destoner, maintenance, saral];
+const row2 = [onAllProducts, post1, grinder1, grinder2, grinder3, globalReach, huller, destoner];
 
 const CreativesSection = () => {
   return (
@@ -48,20 +47,20 @@ const CreativesSection = () => {
       </motion.div>
 
       {/* Row 1 - scroll left */}
-      <div className="relative mb-6" data-aos="fade-up" data-aos-duration="800">
+      <div className="relative mb-6" data-aos="fade-up" data-aos-duration="400">
         <div className="flex animate-scroll-left w-max gap-4">
           {[...row1, ...row1].map((img, i) => (
             <div
               key={`r1-${i}`}
-              className="flex-shrink-0 w-64 h-64 rounded-xl overflow-hidden border border-border transition-all duration-500 hover:border-primary hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]"
+              className="flex-shrink-0 w-64 h-64 rounded-xl overflow-hidden border border-border transition-all duration-500"
               data-aos="zoom-in"
-              data-aos-duration="800"
-              data-aos-delay={i * 50}
+              data-aos-duration="400"
+              data-aos-delay={i * 30}
             >
               <img
                 src={img}
                 alt="Creative work"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover transition-transform duration-500"
                 loading="lazy"
               />
             </div>
@@ -70,20 +69,20 @@ const CreativesSection = () => {
       </div>
 
       {/* Row 2 - scroll right */}
-      <div className="relative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <div className="relative" data-aos="fade-up" data-aos-duration="400" data-aos-delay="100">
         <div className="flex animate-scroll-right w-max gap-4">
           {[...row2, ...row2].map((img, i) => (
             <div
               key={`r2-${i}`}
-              className="flex-shrink-0 w-64 h-64 rounded-xl overflow-hidden border border-border transition-all duration-500 hover:border-primary hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]"
+              className="flex-shrink-0 w-64 h-64 rounded-xl overflow-hidden border border-border transition-all duration-500"
               data-aos="flip-left"
-              data-aos-duration="800"
-              data-aos-delay={i * 50}
+              data-aos-duration="400"
+              data-aos-delay={i * 30}
             >
               <img
                 src={img}
                 alt="Creative work"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover transition-transform duration-500"
                 loading="lazy"
               />
             </div>

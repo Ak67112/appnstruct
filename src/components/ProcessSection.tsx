@@ -137,15 +137,10 @@ const ProcessSection = () => {
                     whileInView={{ scale: 1, rotate: 0 }}
                     viewport={{ once: true }}
                     transition={{
-                      duration: 0.6,
-                      delay: i * 0.2,
+                      duration: 0.4,
+                      delay: i * 0.1,
                       type: "spring",
                       stiffness: 200
-                    }}
-                    whileHover={{ 
-                      scale: 1.2, 
-                      rotate: 360,
-                      boxShadow: "0 0 30px rgba(14, 165, 233, 0.6)"
                     }}
                   >
                     <span className="text-white font-bold text-xl">{i + 1}</span>
@@ -168,24 +163,18 @@ const ProcessSection = () => {
                     }}
                     viewport={{ once: true }}
                     transition={{
-                      duration: 0.8,
-                      delay: i * 0.15,
+                      duration: 0.4,
+                      delay: i * 0.075,
                       type: "spring",
                       stiffness: 100
                     }}
                     style={{ transformStyle: "preserve-3d" }}
                     data-aos={isEven ? "slide-right" : "slide-left"}
-                    data-aos-duration="800"
-                    data-aos-delay={i * 100}
+                    data-aos-duration="400"
+                    data-aos-delay={i * 50}
                   >
                     <motion.div
                       className={`relative bg-gradient-to-br from-card to-background border-2 border-border rounded-2xl p-8 shadow-lg overflow-hidden group cursor-pointer`}
-                      whileHover={{ 
-                        scale: 1.05,
-                        rotateX: 5,
-                        rotateY: isEven ? 5 : -5,
-                        boxShadow: "0 20px 60px rgba(14, 165, 233, 0.3), 0 0 40px rgba(14, 165, 233, 0.2)"
-                      }}
                       style={{ transformStyle: "preserve-3d" }}
                     >
                       {/* Animated Background Gradient */}
@@ -199,11 +188,6 @@ const ProcessSection = () => {
                       {/* Icon */}
                       <motion.div
                         className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${step.colorClass} mb-6 shadow-lg`}
-                        whileHover={{ 
-                          rotate: [0, -10, 10, -10, 0],
-                          scale: 1.1
-                        }}
-                        transition={{ duration: 0.5 }}
                       >
                         <Icon className="w-8 h-8 text-white" strokeWidth={2} />
                       </motion.div>
@@ -223,7 +207,7 @@ const ProcessSection = () => {
 
                       {/* Hover Glow Effect */}
                       <motion.div
-                        className={`absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br ${step.colorClass} rounded-full blur-3xl opacity-0 group-hover:opacity-30`}
+                        className={`absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br ${step.colorClass} rounded-full blur-3xl opacity-0`}
                         transition={{ duration: 0.5 }}
                       />
                     </motion.div>
@@ -267,10 +251,6 @@ const ProcessSection = () => {
         >
           <motion.div
             className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 rounded-full bg-gradient-to-r from-primary via-blue-500 to-primary bg-[length:200%_100%] text-white font-heading font-semibold shadow-lg text-sm md:text-base touch-manipulation cursor-pointer"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 0 30px rgba(14, 165, 233, 0.6)"
-            }}
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
             }}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,15 +18,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-            >
-              <Facebook size={18} />
-            </a>
-            <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/appnstructx/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -34,12 +26,12 @@ const Footer = () => {
               <Instagram size={18} />
             </a>
             <a
-              href="https://x.com"
+              href="https://www.linkedin.com/company/appnstructx/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
             >
-              <Twitter size={18} />
+              <Linkedin size={18} />
             </a>
           </div>
         </div>
