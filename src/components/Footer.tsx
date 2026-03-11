@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, X } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -24,6 +24,14 @@ const Footer = () => {
               className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
             >
               <Instagram size={18} />
+            </a>
+            <a
+              href="https://x.com/appnstructX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <X size={18} />
             </a>
             <a
               href="https://www.linkedin.com/company/appnstructx/"
