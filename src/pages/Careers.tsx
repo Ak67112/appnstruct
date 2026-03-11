@@ -182,6 +182,15 @@ const Careers = () => {
               Be part of something extraordinary. Shape the future of digital marketing with passionate innovators.
             </motion.p>
 
+            <motion.p
+              className="text-base md:text-lg text-muted-foreground mb-6 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              Share your CV with us at <span className="text-primary font-semibold">hr@appnstruct.com</span>
+            </motion.p>
+
             <motion.button
               className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-primary to-blue-500 text-white font-bold rounded-full text-base md:text-lg shadow-2xl touch-manipulation"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -192,6 +201,13 @@ const Careers = () => {
               style={{
                 transformStyle: "preserve-3d",
                 transform: "perspective(1000px) rotateX(0deg)",
+              }}
+              onClick={() => {
+                const subject = encodeURIComponent("Share Your CV - Appnstruct Careers");
+                const body = encodeURIComponent(
+                  `Hello HR Team,\n\nI am interested in joining your amazing team at Appnstruct. I am attaching my CV for your review and would appreciate the opportunity to discuss how I can contribute to your organization.\n\nI look forward to hearing from you.\n\nBest regards`
+                );
+                window.location.href = `mailto:hr@appnstruct.com?subject=${subject}&body=${body}`;
               }}
               onMouseMove={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
@@ -378,6 +394,13 @@ const Careers = () => {
                       className="w-full sm:w-auto px-5 md:px-6 py-2.5 md:py-3 bg-primary text-white font-semibold rounded-lg text-sm md:text-base touch-manipulation"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
+                      onClick={() => {
+                        const subject = encodeURIComponent(`Application for ${job.title}`);
+                        const body = encodeURIComponent(
+                          `Hello HR Team,\n\nI am interested in applying for the following position:\n\nPosition: ${job.title}\nLocation: ${job.location}\nType: ${job.type}\n\nI am excited about this opportunity and would like to learn more.\n\nBest regards`
+                        );
+                        window.location.href = `mailto:hr@appnstruct.com?subject=${subject}&body=${body}`;
+                      }}
                     >
                       Apply Now
                     </motion.button>
