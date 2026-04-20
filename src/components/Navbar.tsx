@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoImg from "../assets/logo.png";
+import favIconImg from "/favicon.png";
 
 const navLinks = [
   { label: "Home", href: "home" },
@@ -41,7 +42,7 @@ const Navbar = () => {
             className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
           >
             <img 
-              src={logoImg} 
+              src={favIconImg} 
               alt="Appnstruct Logo" 
               className="h-16 sm:h-20 w-auto"
             />
@@ -49,7 +50,7 @@ const Navbar = () => {
         ) : (
           <Link to="/" className="flex items-center gap-3">
             <img 
-              src={logoImg} 
+              src={favIconImg} 
               alt="Appnstruct Logo" 
               className="h-16 sm:h-20 w-auto"
             />
@@ -113,6 +114,9 @@ const Navbar = () => {
               Reach Us
             </Link>
           )}
+          <button className="ml-4 p-2 hover:bg-foreground/10 rounded-full transition-colors">
+            <Search size={20} className="text-foreground" />
+          </button>
         </div>
 
       
@@ -122,6 +126,9 @@ const Navbar = () => {
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+        <button className="md:hidden p-2 hover:bg-foreground/10 rounded-full transition-colors">
+          <Search size={20} className="text-foreground" />
         </button>
       </div>
 
