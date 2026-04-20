@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoImg from "../assets/logo.png";
 import favIconImg from "/favicon.png";
@@ -114,9 +114,6 @@ const Navbar = () => {
               Reach Us
             </Link>
           )}
-          <button className="ml-4 p-2 hover:bg-foreground/10 rounded-full transition-colors">
-            <Search size={20} className="text-foreground" />
-          </button>
         </div>
 
       
@@ -126,9 +123,6 @@ const Navbar = () => {
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-        <button className="md:hidden p-2 hover:bg-foreground/10 rounded-full transition-colors">
-          <Search size={20} className="text-foreground" />
         </button>
       </div>
 
